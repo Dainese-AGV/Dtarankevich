@@ -8,6 +8,7 @@ const MyButton = (props) => {
   return <button {...props} />;
 }
 
+// eslint-disable-next-line no-unused-vars
 export default function LoginPage({ sting, ...otherProps}) {
   const formik = useFormik({
     initialValues: {
@@ -15,13 +16,14 @@ export default function LoginPage({ sting, ...otherProps}) {
       password: "",
     },
     onSubmit: (values) => {
+      // eslint-disable-next-line no-alert
       alert(JSON.stringify(values, null, 2));
       formik.resetForm();
     },
     validateOnChange: false,
     validateOnBlur: true,
     validationSchema: object({
-      login: string().email("имейл не имейл"),
+      login: string().email("Введённое слово не соответствует Email"),
       password: string().required(),
     }),
   });
