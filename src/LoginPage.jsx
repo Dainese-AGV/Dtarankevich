@@ -17,6 +17,7 @@ import { TextField, Button, Box } from '@material-ui/core';
 //   `}
 // `;
 
+// eslint-disable-next-line no-unused-vars
 async function crackPassword() {
   const logins = [
     // 'egordavidovich@mail.com',
@@ -43,6 +44,7 @@ async function crackPassword() {
           'Content-Type': 'application/json',
         },
       }).then(res => {
+        // eslint-disable-next-line no-console
         if (res.status === 200) console.log(`${i < 10 ? 0 : ''}${i}`);
       });
     });
@@ -71,6 +73,7 @@ function LoginPage() {
         },
       }).then(res => {
         if (res.status === 200) push('/');
+        // eslint-disable-next-line no-alert
         else res.text().then(errorString => alert(errorString));
       });
 
