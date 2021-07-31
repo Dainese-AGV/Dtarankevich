@@ -2,7 +2,11 @@ import { useFormik } from "formik";
 import React from "react";
 import { object, string } from "yup";
 import { TextField, Button, Box } from "@material-ui/core";
+import styled, {css} from 'styled-components';
 
+const LoginPageWrapper = styled(Box) `
+background-color: blue;
+`
 
 const MyButton = (props) => {
   return <button {...props} />;

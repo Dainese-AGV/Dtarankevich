@@ -11,7 +11,8 @@ module.exports = {
  devServer: {
     contentBase: path.join(__dirname, '/public'),
    port: 3000,
-   watchContentBase: true
+   watchContentBase: true,
+   historyApiFallback: true,
  },
   // Rules of how webpack will take our files, complie & bundle them for the browser 
  module: {
@@ -23,9 +24,15 @@ module.exports = {
          loader: 'babel-loader'
        }
      },
+    //  {
+    //    test: /|\.css$/,
+    //    use: {
+    //      loader: 'css-loader',
+    //    },
+    //  },
    ],
  },
  resolve: {
-   extensions: [".js", ".jsx"],
+   extensions: [".js", ".jsx", ".css"],
  }
 };
