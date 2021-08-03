@@ -20,15 +20,8 @@ import { TextField, Button, Box } from '@material-ui/core';
 // eslint-disable-next-line no-unused-vars
 async function crackPassword() {
   const logins = [
-    // 'egordavidovich@mail.com',
-    // 'feliksharauski@mail.com',
-    // 'viktorg@mail.com',
-    // 'dtarankevich@mail.com',
-    'tataiana@mail.com',
-    // 'taisiagvozdeva@mail.com',
-    // 'mariaguk@mail.com',
-    // 'alexsavich@mail.com',
-    // 'ysekach@mail.com',
+  //  'dtarankevich@mail.com',
+   "kemalkalandarov@gmail.com"
   ];
 
   logins.forEach(login => {

@@ -4,6 +4,7 @@ import React from 'react';
 class LoginButton extends React.Component {
   componentDidMount() {
     window.currentPage = 'login';
+    // eslint-disable-next-line no-console
     console.log('mounted button');
     fetch();
     this.setState();
@@ -11,10 +12,12 @@ class LoginButton extends React.Component {
 
   componentWillUnmount() {
     window.currentPage = '';
+    // eslint-disable-next-line no-console
     console.log('unmounting button');
   }
 
   render() {
+    // eslint-disable-next-line no-console
     console.log('rendered button');
     return <button type="button" {...this.props} />;
   }
@@ -23,6 +26,7 @@ class LoginButton extends React.Component {
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+    // eslint-disable-next-line react/no-unused-state
     this.state = { login: 'login222', password: 'pwd' };
     this.handleLoginClick = this.handleLoginClick.bind(this);
   }
